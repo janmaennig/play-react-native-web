@@ -7,22 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, FlatList, Image} from 'react-native';
-import offices from './fixtures/offices';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import { Link } from './routing';
-
-const instructions = Platform.select({
-	ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-	android:
-		'Double tap R on your keyboard to reload,\n' +
-		'Shake or press menu button for dev menu',
-	web: 'Use CMD+R in browser window'
-});
 
 type Props = {};
 export default class App extends Component<Props> {
 	render() {
-		const {  id, name, address, zip, city, image } = this.props.selectedOffice;
+		let {  id, name, address, zip, city, image } = this.props.selectedOffice;
 
 		return (
 			<View style={styles.container}>
@@ -41,7 +32,7 @@ export default class App extends Component<Props> {
 					<Text>{`Adresse: ${address} ${zip} ${city}`}</Text>
 				</View>
 				<View>
-					<Image style={{ width: 50, height: 50 }} source={{ uri: image }} />
+					<Image style={{ width: 200, height: 200 }} source={{ uri: image }} />
 				</View>
 			</View>
 		);

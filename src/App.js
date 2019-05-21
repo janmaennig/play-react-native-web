@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, FlatList, Image } from 'react-native';
+import { Platform, StyleSheet, SafeAreaView } from 'react-native';
 import { Router, Switch, Route } from './routing';
 import Home from './Home';
 import Subpage from './Subpage';
@@ -47,7 +47,7 @@ export default class App extends Component<Props> {
 
 	render() {
 		return (
-			<View style={styles.container}>
+			<SafeAreaView style={styles.container}>
 				<Router>
 					<Switch>
 						<Route exact path="/" render={props => (
@@ -58,7 +58,7 @@ export default class App extends Component<Props> {
 						)} />
 					</Switch>
 				</Router>
-			</View>
+			</SafeAreaView>
 		);
 	}
 }

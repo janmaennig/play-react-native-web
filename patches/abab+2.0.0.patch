@@ -1,0 +1,13 @@
+diff --git a/node_modules/abab/index.js b/node_modules/abab/index.js
+index 49d5ae9..4fabdf4 100644
+--- a/node_modules/abab/index.js
++++ b/node_modules/abab/index.js
+@@ -3,6 +3,8 @@
+ const atob = require("./lib/atob");
+ const btoa = require("./lib/btoa");
+ 
++/*HALLO WELT*/
++
+ module.exports = {
+   atob,
+   btoa
